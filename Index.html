@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>映像部 業務効率化ツールポータル</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6; /* 薄いグレーの背景 */
+            color: #1f2937;
+        }
+        /* カードのホバーアニメーション */
+        .tool-card {
+            transition: all 0.3s ease;
+        }
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img id="companyLogo" alt="Company Logo" class="h-8 w-auto object-contain" style="display: none;">
+                <h1 class="text-xl md:text-2xl font-bold text-gray-800 tracking-tight">業務効率化ツール</h1>
+            </div>
+            <div class="text-xs text-gray-500 hidden sm:block">
+                Internal Tools Portal
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-10 max-w-5xl">
+        
+        <div class="text-center mb-10">
+            <h2 class="text-2xl font-bold mb-3 text-gray-800">Available Tools</h2>
+            <p class="text-gray-600">業務の自動化・効率化を支援する社内用アプリケーション一覧です。<br>すべてのツールはローカル処理（PC内完結）で設計されており、セキュリティ面に配慮しています。</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <a href="https://yueda-spec.github.io/V-checker/" target="_blank" class="tool-card block bg-white rounded-xl border border-gray-200 p-6 h-full hover:border-blue-400 group">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="bg-blue-100 text-blue-600 p-3 rounded-lg group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    </div>
+                    <span class="text-gray-400 hover:text-gray-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                    </span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">V-checker</h3>
+                <p class="text-sm font-bold text-gray-700 mb-2">動画プレビュー＆修正指示作成ツール</p>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    動画のプレビュー、タイムコード付きの修正指示入力、キャプチャ画像への書き込み、そしてPDF出力までをワンストップで行えるツールです。
+                    全ての処理がブラウザ（ローカル）内で完結するため、機密性の高い映像データも外部サーバーに送信されることなく、安心して利用できます。
+                </p>
+            </a>
+
+            <a href="https://yueda-spec.github.io/ToolKit/" target="_blank" class="tool-card block bg-white rounded-xl border border-gray-200 p-6 h-full hover:border-indigo-400 group">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="bg-indigo-100 text-indigo-600 p-3 rounded-lg group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                    </div>
+                    <span class="text-gray-400 hover:text-gray-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                    </span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors">計算ツールキット</h3>
+                <p class="text-sm font-bold text-gray-700 mb-2">映像制作現場のための計算・作成アシスタント</p>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    「ビットレート計算」「ファイルサイズ予測」「アスペクト比計算」「タイムコード変換」など、編集・制作業務で発生する面倒な計算を行えます。
+                    さらに、尺計算機能と連携した「簡易Qシートエディタ」機能も搭載しており、簡易Qシートの作成・PDF出力も可能です。
+                </p>
+            </a>
+
+            <a href="https://yueda-spec.github.io/AI-telop-checker/" target="_blank" class="tool-card block bg-white rounded-xl border border-gray-200 p-6 h-full hover:border-purple-400 group">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="bg-purple-100 text-purple-600 p-3 rounded-lg group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
+                    </div>
+                    <span class="text-gray-400 hover:text-gray-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                    </span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">AIテロップチェッカー</h3>
+                <p class="text-sm font-bold text-gray-700 mb-2">AI × ルールブックによるダブルチェック</p>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    テロップ画像を読み込み、専用のプロンプトをセットしたGem（Gemini）と連携して誤字脱字や「ANN表記のきまり」への違反、固有名詞の事実確認を一括チェックします。
+                    画像のPDF化などの処理はローカルで行い、AIへのデータ送信も学習利用されない安全な設計です。<br>
+                    <span class="text-red-600 font-bold text-xs mt-1 block">※AIはハルシネーション（誤った内容を生成する現象）を起こすため、過信は禁物です</span>
+                </p>
+            </a>
+
+            <a href="https://yueda-spec.github.io/Media-conversion/" target="_blank" class="tool-card block bg-white rounded-xl border border-gray-200 p-6 h-full hover:border-green-400 group">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="bg-green-100 text-green-600 p-3 rounded-lg group-hover:bg-green-600 group-hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" /></svg>
+                    </div>
+                    <span class="text-gray-400 hover:text-gray-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                    </span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">メディア変換ツール</h3>
+                <p class="text-sm font-bold text-gray-700 mb-2">EDIUSで読み込めない形式を安全に変換</p>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    iPhoneの写真（HEIC）やPDF、SVGファイルなどを、EDIUSで読み込めるJPG/PNG形式にブラウザ上で変換します。
+                    一般的な変換サイトとは異なり、ファイルを外部サーバーにアップロードせずPC内で処理するため、社外秘の資料や素材も安全に変換可能です。
+                </p>
+            </a>
+
+            </div>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-auto">
+        <div class="container mx-auto px-4 py-6 text-center">
+            <p class="text-sm text-gray-500">
+                不具合・要望あれば miruca 映像部 上田までご連絡下さい
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // logo.txtからBase64データを読み込んで画像を表示する
+        fetch('logo.txt')
+            .then(response => {
+                if (!response.ok) throw new Error("Logo file not found");
+                return response.text();
+            })
+            .then(data => {
+                const img = document.getElementById('companyLogo');
+                if(img && data.trim().length > 0) {
+                    img.src = data.trim();
+                    img.style.display = 'block';
+                }
+            })
+            .catch(error => {
+                console.log('Logo loading skipped:', error);
+            });
+    </script>
+</body>
+</html>
